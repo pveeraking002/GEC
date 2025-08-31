@@ -1,0 +1,105 @@
+{% load static %}
+<html>
+    <head>
+        <link href ="{%static "/CSS/orders.css" %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="{% static '/CSS/upload.css' %}" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <button type="button" id="pwin" class="upbtn"> <i class="fa fa-plus" aria-hidden="true" style="font-size:1rem;"></i></button>
+        <section class="lgheader">
+            <div class = "lgchild">
+                <h1>Logged in By :  {{ data }}</h1> 
+                <form method="POST"> 
+                    {% csrf_token %}
+                    <a href="#" id="logoff">LOG OFF </a>
+                </form>
+            </div>
+        </section>  
+        <section class="home">
+            <div class="jumpotron">
+                <div class="jchild">
+                    <div class="ouform">
+                        <!-- next status-->
+                        <div class="Date">
+                            <h3>Order Date</h3>
+                            <input type="date" placeholder="Enter Mobile Number" class="jinp" name="jdate" id="jdate"/>
+                        </div>
+                        <div class="sts">
+                            <h3>Delivery Status </h3>
+                            <select placeholder="select the Status" name="jsts" id="jsts" class="jinp">
+                                <option value="None">None</option>
+                                <option value="ALL">ALL</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Cancelled">Cancelled</option>
+                                <option value="Delivered">Delivered</option>        
+                                <option value="Ready to Deliver">Ready To Deliver </option> 
+                            </select>
+                        </div>
+                        <!-- next status-->
+                        <div class="mobile">
+                            <h3> Mobile Number </h3>
+                            <input type="text" placeholder="Enter Mobile Number" class="jinp" name="jmobile" id="jmobile"/>
+                        </div>
+                    </div>
+                    <div class="btn_grp">
+                        <div class="jbtn_con">
+                            <button type="button" class="jbtn" id="fetch">Search</button>
+                        </div>  
+                        <div class="jbtn_con_csv">
+                            <button type="button" class="jbtn" id="csv" onclick="writeCsv()">Download Excel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="jtbls">
+            <div class="page_container">    
+                <div class="pagination">
+                    <button class="pagination-button" id="prev-button" title="Previous page" aria-label="Previous page">
+                        &lt;
+                      </button>
+                     <div id="pagination-numbers"></div>
+                    <button class="pagination-button" id="next-button" title="Next page" aria-label="Next page">
+                        &gt;
+                    </button>
+                </div>
+            </div>
+            <div class="jchildtbls">
+                <form action ="" method="POST"> 
+                {% csrf_token %} 
+                <table class="jtbl" id="jtbl" aria-live="polite">
+                    <th>Date</th>
+                    <th>ProductName</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                    <th>User</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Status</th> 
+                    <th>Action</th>
+                    <tbody id="jdata">
+                    </tbody>
+                </table>
+            </div>
+            </form> 
+        </section>
+        <section class="uploadproduct">
+            <h1>ADD PRODUCT</h1>
+            <Br/>
+            <div class="brd"></div>
+            <br/>
+            {% include 'demo/upload.html' %}
+        </section>
+    </body>
+    <script type="text/javascript" src="{% static 'JS/pagination.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/Page.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/product.js' %}"></script>
+    <script type="text/JavaScript" src="{% static '/JS/index.js' %}"></script>
+    <script type="text/JavaScript" src="{% static '/JS/modify.js' %}"></script>
+    <script type="text/JavaScript" src="{% static '/JS/CSV.js' %}"></script>
+</html> 

@@ -1,0 +1,59 @@
+.ord
+{
+    height:90vh;
+    padding:100px;
+    text-align: center;
+    font-family:'audiowide';
+    font-size:.5rem;
+    z-index:1100;   
+}
+.mainwin
+{
+    width:40%;
+    height:100vh;
+    background-color:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    overflow-y: auto;
+    box-shadow: 0px 0px 20px 0px #000;
+    display:none;
+}   
+.ord h1
+{
+    font-size:1.2rem;
+}
+.ttlo
+{
+    width:100%;
+    padding:20px;
+    border-collapse: collapse;
+}
+.ttlo td
+{
+    font-family:'poppins';
+    border:1px solid #e3e3e3;
+    font-size:.8rem;
+    font-weight: 100;
+}   
+.ttlo th    
+{
+    font-family:'poppins';
+    border:1px solid #e3e3e3;
+    font-size:.8rem;
+    font-weight: 100;
+}   
+
+
+
+
+
+@media only screen and (max-width: 600px)
+{
+    .mainwin
+    {
+        width:100%;
+       
+    }   
+}

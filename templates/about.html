@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static '/CSS/safty.css' %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="{% static '/CSS/about.css' %}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class = "contact_banner"></div>
+        <div class = "contact_container"><!--Contact Container begin-->
+            <h1>Contact Us </h1>
+            <div class = "data">
+                <div class="address">
+                    <div class="address_link"><a href="#"><i class="fa fa-map-marker"></i></a></div>
+                    <div class ="address_data">
+                        <h3>Address</h3>
+                        <p>Golden Eagle crackers  Sivakasi-Chattur Road, <br/>(OPP : MRF Tyre company), <br/> meenampatti,Sivakasi - 626 189</p>
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="address_link"><a href="#"><i class="fa fa-phone"></i></a></div>
+                    <div class ="address_data">
+                        <h3>Phone</h3>
+                        <p>+91 9025532959</p>
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="address_link"><a href="#"><i class="fa fa-globe"></i></a></div>
+                    <div class ="address_data">
+                        <h3>Connect Us</h3>
+                        <p>raji7rajiv@gmail.com</p>
+                    </div>
+                </div>
+            </div><br/><br/><br/>
+        </div><!--Contact container closed-->
+        <div class = "ifra">
+            <img src='{% static "Image/unnamed.webp"%}' width="100%" height="100%" loading="lazy"/>
+        </div>
+    </body>
+</html>

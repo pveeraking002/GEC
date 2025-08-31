@@ -1,0 +1,13 @@
+{% block login %}
+    <div class="block" id="logwindow">
+        <h4>LOGIN WINDOW</h4>
+        <div class="lgw">
+            <form action="/login" method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="Username" name="uname" class="inp"/>
+                <input type="text" placeholder="Password" name="passw" class="inp"/>
+                <button type="submit" class="inpb" id="login">LOGIN</button>
+            </form>
+        </div>
+    </div>
+{% endblock login %}        

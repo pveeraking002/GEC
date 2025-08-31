@@ -1,0 +1,166 @@
+:root
+{
+    --bgcolor:#fcbd24;
+    --sidebar:#F5F5F5;
+}
+.list 
+{
+    display: none;
+}
+.price
+{
+    width:100%;
+    z-index:10000;
+}
+.price_container
+{
+    width:100%;
+    height:90vh;
+    position:fixed;
+    top:110px;
+    background-color:#fff;
+    z-index:300;
+    background-color:var(--bgcolor);
+}
+.price_tbl
+{
+    width:100%;
+    height:auto;
+    position:absolute;
+    top:120px;
+    z-index:300;
+}
+
+.tbls
+{
+    width:100%;
+    height:700px;
+    position:absolute;
+    top:5%;
+    left:2% ;
+    background-image: url('../Image/logo/eagle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    filter: grayscale(1);
+    z-index:-1;
+    opacity:0.1;
+}
+.tbl
+{
+    margin-left:2%;
+    margin-right:2%;    
+    margin-top:2%;
+    font-family:'poppins';
+    font-size:.8rem;
+    font-style:normal;
+    font-weight: 100;
+    margin-bottom:100px;
+    background-color:#fff;
+    opacity:1;
+    filter: grayscale(20%);
+
+}
+#tblc
+{
+    width:100%;
+    font-family:'poppins';
+    border-collapse: collapse;
+    opacity:1;
+    border-radius:5px;
+}   
+#tblc th, #tblc td
+{
+    border: 1px solid #ddd;
+    padding:3px;
+    text-align:center;
+    font-size:1rem;
+}
+#tblc th 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #403f3d;
+    color: white;
+    position:sticky;
+}
+.txt_price
+{
+    width:100px;
+    padding:3px;
+    text-align: center;
+    border:none;
+    border-radius:5px;
+}
+.amount_window
+{   
+    width:100%;
+    position:fixed;
+    bottom:0;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border:1px solid silver;
+    background-color:#403f3d;
+    color:#fff;
+    font-size:.8rem;
+    font-weight:normal;
+    z-index:1500;
+}
+
+
+
+
+@media only screen and (max-width: 600px),(min-device-width: 768px) and (max-device-width: 1024px) 
+{
+    .price_list
+    {
+        position:fixed;
+        top:0px;
+    }
+    .price_container
+    {
+        width:100%;
+        height:100vh;
+        position:fixed;
+        top:70px;
+    }
+    .tbl, th, td, tr
+    {
+        display:block;  
+    }
+    .tbl th
+    {
+        display:none;
+    }
+
+    #tblc td 
+    {
+        border:none;
+        border-bottom: 1px solid #e3e3e3;
+        position:relative;
+        padding-left:70%;
+        font-size:.8rem;
+        padding:15px;
+    }   
+    #tblc td:before { 
+        position: absolute;
+        margin-top:1.8%;
+        left: 20px;
+        margin-left: 10px;
+        width:min-content;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    #tblc td:nth-of-type(2):before { content: "Code"; }
+    #tblc td:nth-of-type(3):before { content: "Product"; }
+    #tblc td:nth-of-type(4):before { content: "Content"; }
+    #tblc td:nth-of-type(5):before { content: "Actual Price"; }
+    #tblc td:nth-of-type(6):before { content: "Amount";}
+    #tblc td:nth-of-type(7):before { content: "Discount"; }
+    #tblc td:nth-of-type(8):before { content: "QTY"; }
+    #tblc td:nth-of-type(9):before { content: "Total"; }
+}

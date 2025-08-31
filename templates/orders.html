@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+    <head>
+        <link href ="{%static "/CSS/orders.css" %}" rel="stylesheet" type="text/css"/>
+    </head>
+</html>
+<div class ='login'>
+    <div class = "login_child">
+        <form action ="" method="POST">
+        {% csrf_token %} 
+        <div class = "lghead"><h3>Golden Eagle Crackers </h3></div>
+        <input type = "text" placeholder="Enter your Username" class='lgfrm' name="uname"/>
+        <input type = "password" placeholder="Enter your Password" class='lgfrm' name="upass"/><br/>
+        <input type = "submit" value ="Login" class="lgbtn"/>
+        <br/>
+        </form>
+        <div><a href="#" class="lgfrd">Forgot Password ?</a></div>
+    </div>
+</div>

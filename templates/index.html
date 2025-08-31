@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head itemscope="" itemtype="http://www.schema.org/website">
+        <meta charset="UTF-8">
+        <title>Golden Eagle Crackers | Online Crackers Shop | Diwali Crackers | Sivakasi Crackers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Golden Eagle Crackers">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Golden Eagle Crackers">
+        <meta property="og:url" content="https://goldeneaglecrackers.in/">
+        <meta property="og:image" content="">
+        <meta name="keywords" content="golden Eagle crackers, online crackers, diwali crackers, sivakasi crackers">
+        <meta property="og:description" name="description" content="Golden Eagle Crackers have immense pleasure in welcoming you to visit our mega fireworks showroom located in Sivakasi">
+        <meta name="robots" content="all">
+        <meta name="revisit-after" content="10 Days">
+        <meta name="copyright" content="GoldenEagle Crackers">
+        <meta name="language" content="English">
+        <meta name="distribution" content="Global">
+        <meta name="web_author" content="srisoftwarez.com">
+        <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+        <!--https://goldeneaglecrackers.in/static/Image/logo/eagle.png-->
+        <link
+            rel="icon"
+            href="https://goldeneaglecrackers.in/static/Image/logo/eagle.png"
+            type="image/x-icon"
+        />
+        <link rel="icon" sizes="192x192" href="images/android-icon-192x192.png">
+        <link rel="canonical" href="https://goldeneaglecrackers.in">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+        <link href="{% static '/CSS/upload.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/CSS/index.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/CSS/pop_up.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/CSS/font-awesome.min.css' %}" rel="stylesheet"/>
+        <link href="{% static '/CSS/price_list.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/CSS/order.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/CSS/orders.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/CSS/safty.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/CSS/about.css' %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PP5C373"></script><script src="js/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PP5C373');</script>
+            <!-- End Google Tag Manager -->
+            <!-- Google tag (gtag.js) -->
+            <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-89WC155PMT"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-89WC155PMT');
+        </script>
+    </head>
+    <body>
+        <section class="header">
+            <div class="container">
+                <div class="totburger" id="burger"> 
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                    <div class="burger"></div>
+                </div>
+               
+                <div class="brand_logo">
+                    <h4>Golden Eagle Crackers</h4> 
+                </div>
+                <ul class="menus" id="burgermenu">
+                    <li class="item"><a href="#" id="home">Home</a></li>
+                    <li class="item"><a href="#" id="safety">Safty tips</a></li>
+                    <li class="item"><img src="{% static "/Image/logo/eagle.png" %}" class="emb"/></li>
+                    <li class="item"><a href="#" id="pricelist">Price List</a></li>
+                    <li class="item"><a href="#" id="contactus">Contact Us</a></li>
+                    <div class="cls" id="clsburger"><span>X</span></div>
+                </ul>
+                <div class="user" id="user">
+                    <i class="fa fa-user usr" aria-hidden="true" style="font-size:2rem;"></i>
+                </div>
+            </div>  
+        </section> 
+        <section class="mainpage">
+            <div class="logobanner"></div>
+            {% include 'base.html' %}
+            {% include 'footer.html' %}
+            <!--Price List-->
+        </section>
+        <section class="list">
+            {% include 'list.html' %}
+        </section>
+        <section class="safty">
+           {% include 'safty.html' %}
+        {% include 'footer.html' %}
+        </section>
+        <section class = "contact" >
+            {% include 'about.html' %}
+          {% include 'footer.html' %}
+        </section>
+    </body>
+
+    <script type="text/JavaScript" src="{% static '/JS/index.js' %}"></script>
+    <script type="text/JavaScript" src="{% static '/JS/product.js' %}"></script>
+    <script type="text/JavaScript" src="{% static '/JS/order.js' %}"></script>
+    <script type="text/JavaScript" src="{% static '/JS/calc.js' %}"></script>
+</html>

@@ -1,0 +1,147 @@
+{% load static %}
+<section class="price">
+            <div class="price_list"></div>
+            <div class="price_container"></div>
+            <div class="price_tbl">
+            <!--  <div class="amount_window">
+                    <div class="amt_win">Total Products : 1</div>
+                    <div class="amt_win">NetTotal : Rs:80</div>
+                    <div class="amt_win">DiscountTotal : Rs:25</div>
+                    <div class="amt_win">SubTotal: Rs:25</div>
+                    <div class="amt_win">OverallTotal : Rs:25</div>
+               </div>-->
+               <div class="imager" id ="imager"><!--Start Imageer-->
+                    <div class="img_con">
+                        <div class="child_image">
+                            <img src='{% static 'Image/safetytips.png' %}' id='vimage' class="vimage"/>
+                        </div>
+                        <div class = "child_image_head">
+                            <h1 id='vhead'>Not Found</h1>
+                        </div>
+                        <div class = "child_image_link">
+                            <a href="#" id='vcls' class="vcls">Close</a>
+                        </div>
+                    </div>
+                </div><!--end imager-->
+               <div class="tbl">
+                <form action ="/filterdata/" method="GET" id="form">
+                    {% csrf_token %}
+                    <table id="tblc">
+                        <tr>
+                            <th>IMAGE</th>  
+                            <th>CODE</th>       
+                            <th>PRODUCT NAME</th>  
+                            <th>CONTENT</th>  
+                            <th>ACTUAL PRICE</th>      
+                            <th>AMOUNT</th>  
+                            <th style="display:none;">DISCOUNT</th>   
+                            <th>QUANTITY</th>  
+                            <th>TOTAL</th>  
+                        </tr>
+                        <tbody id="protbl">
+                        </tbody>
+                    </table>
+                    <br/>
+                    <div class ="masterwindow">
+                        <div class = "userform">
+                            <select id="state" class='uform'>
+                                <option value="TAMILNADU">TAMILNADU</option>
+                                <option value="PONDICHERRY">PONDICHERRY</optoin>
+                            </select>
+                            <input type="text" placeholder="Enter the City" id="city" class="uform"/>
+                            <input type="text" placeholder="Name (*)" id="name" class="uform"/>
+                            <input type="text" placeholder="Mobile (*)" id="mobile" class="uform"/>
+                            <input type="text" placeholder="Email" id="email" class="uform"/><br/>   
+                            <textarea id="address" class="uaddress" rows="10" cols="20"  placeholder="Address (*)"></textarea>
+                        </div>
+                        <div class="account">
+                            <table class="ttl">
+                                <tr>
+                                    <td>NetTotal</td>
+                                    <td><span id="nett">0.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td>DiscountTotal</td>
+                                    <td><span id="dnett" >0.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Without Discount</td>
+                                    <td><span id="wdt" >0.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td>SubTotal</td>
+                                    <td><span id="snett" >0.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:bold; color:red;">Min-order Amount</td>
+                                    <td style="font-weight:bold; color:red;">Rs&nbsp;<span>2500.00</span></td>  
+                                </tr>
+                                <tr>
+                                    <td>Rount-OFF</td>
+                                    <td><span id="roff">0.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:bold;">Overall Total</td>
+                                    <td style="font-weight:bold;"><span id="overall">0.00</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class ="subwindow">
+                        <button type="button" class="subtn" id="placeorder">Place Order </button>
+                    </div>
+                    <div class="tbls"></div>
+                    <br/><br/>
+                    <section class="copyright">
+                        <div class="copy_banner">
+                            <div class="copy_1">Golden Eagle Crackers</div>
+                            <div class="copy_1">@ All Rights Reserved</div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+ </section>
+
+ <section class="mainwin" id="srctbl">
+    <form action ="" method="POST">
+    {% csrf_token %}
+    <div id="srctbl">
+        <div class = "orderwindow">
+            <div class="ord">
+                    <h1>PLACE ORDER </h1><br/>
+                <br/>
+                <div class="bor"></div> 
+                <br/>
+                <div class = "mini">
+                    <table class="ttlo">
+                        <tr>
+                            <th>CODE</th>
+                            <th>PRODUCT</th>
+                            <th>QTY</th>
+                            <th>Aprice</th>
+                            <th>Price</th>  
+                            <th>Total</th>
+                        </tr>   
+                        <tbody id="srcdata"></tbody>
+                    </table>
+                    <br/><br/>  
+                    <select placeholder="Payment" id="payment"  class="uform" style="width:200px;">
+                        <option value="Cash">Cash</option>
+                        <option value="Gpay">Gpay</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <br/><Br/><br/>
+                    <div class ="subwindow">
+                        <button type="button" class="subtn" id="ordercomplete">Complete Order!</button>
+                    </div>
+                    <div class ="subwindow">
+                        <button type="button" class="subtnc" id="cancelorder">Cancel Order!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+ </section>
+        

@@ -1,0 +1,45 @@
+{% load static %}
+<div class="upl">
+    <div class = "boxer">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" class="fle" placeholder="Please select the file" id="isrc"/>
+            <input type="text"  class="fle" placeholder="Code" id="code"/>
+            <input type="text"  class="fle" placeholder="Product" id="product"/>
+            <select class="fle" placeholder="Content" id="content"/> 
+                <option value="BOX 1">BOX 1 </option>
+            </select>
+            <input type="text"  class="fle" placeholder="Actual Price" id="aprice"/>
+            <input type="text"  class="fle" placeholder="Amount" id="amt"/>
+            <input type="text"  class="fle" placeholder="Discount" id="dis"/>
+            <input type="text"  class="fle" placeholder="Group" id="grp"/>
+            <br/><br/>  
+            <button type="button" class="fle_btn" id="upro">Upload</button>
+            <button type="button" class="fle_btn" id="refresh">Refresh</button>
+        </form>
+     <!--box table -->
+        <br/>
+        <form action="" method="POST" enctype="multipart/form-enctype">
+            {% csrf_token %}
+            <table class="utbl">
+                <tr>
+                    <th>CH</th>
+                    <th>IMG</th>
+                    <th>IMAGE</th>
+                    <th>CODE</th>
+                    <th>PRODUCT</th>
+                    <th>CONTENT</th>
+                    <th>APRICE</th>
+                    <th>AMOUNT</th>
+                    <th>GROUP</th>
+                    <th>DELETE</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>    
+            </table><br/>
+            <div class="mod">
+                <button type="button" class='mod_btn' id="mod_btn">MODIFY</button>
+            </div>
+        </form>
+    </div>
+</div>  

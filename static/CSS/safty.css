@@ -1,0 +1,179 @@
+
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    max-width: 100%;
+}
+.safty
+{
+    width:100%;
+    height:100vh;
+    background-color:transparent;
+    position: absolute;
+    top:7rem;  
+    display:none;
+}
+.child_safty
+{
+    background-color:red;
+    width:100%;
+    height:70vh;
+    position: relative;
+    top:0rem;
+    background: url('../Image/safetytips.jpg');
+    background-size: cover;
+    background-position:center;
+}
+.child_safty h1
+{
+    color:white;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    font-weight: 600;
+    font-size:3rem;
+    background-color: rgba(0,0,0,0.4);
+}
+.saf_logo
+{
+    width:100%;
+    padding:2rem;
+    text-align: center;
+}
+.saf_logo h1
+{
+    color:#fcbd24;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.saf_logo p
+{
+    margin-top:1.5rem;
+    font-size:1.2rem;
+}
+
+.saf_banner
+{
+    max-width:100%;
+    height:100%;
+    margin:5rem;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    border-radius:10px;
+}
+.saf_banner .part1
+{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.saf_banner .part2
+{
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top:15rem;
+}
+
+.para_head, .para
+{
+    padding:1rem;
+}
+.para i 
+{
+    margin-top: 1.2rem    ;
+}
+
+.para i span
+{
+    margin:2rem;
+    font-size:1rem;
+    font-weight:300;
+}
+
+
+
+
+
+@media only screen and (max-width:600px)
+{
+    html
+    {
+        font-size:16px;
+    }
+
+    .safty
+    {
+        width:100%;
+        height:auto;
+        background-color: #fff;
+        position: absolute;
+        top:0rem;  
+    }
+    .saf_logo
+    {
+        padding:2rem;
+        text-align: center;
+        font-size:1.2rem;
+    }
+    .saf_logo h1
+    {
+        color:#fcbd24;
+        font-size:1.8rem;
+        font-weight: bold;
+    }
+    .saf_logo p
+    {
+        margin-top:1.8rem;
+        font-size:.8rem;
+    }
+    .child_safty h1
+    {
+        font-size:2rem;
+    }
+
+    .saf_banner
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .saf_banner
+    {
+        margin:0;
+        padding:1rem;
+        width:100%; 
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .saf_banner .part2
+    {
+        display: none;
+    }
+    .para_head, .para
+    {
+        padding:1.5rem;
+    }
+    .para i 
+    {
+        margin-top: 1rem    ;
+    }
+    .para i span
+    {
+        margin:1rem;
+        font-size:.8rem;
+        font-weight:300;
+    }
+
+}
